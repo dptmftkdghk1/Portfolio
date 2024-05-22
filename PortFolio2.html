@@ -64,34 +64,36 @@
             </div>
         </div>
 
-        <div>
-            <div>
-                <img src="" alt="">
+        <div class="Main_Back_Detail">
+            <div class="Person_Img_Position">
+                <div class="Person_Img_Box">
+                    <img src="src/Person_Img.jpg" alt="">
+                </div>
             </div>
-            <div>
+            <div class="Person_Info_Back_Ground">
                 <!-- 성명 -->
-                <div>
-                    <div></div>
-                    <div>성명</div>
-                    <div>황예슬</div>
+                <div class="Person_Info_name_Box">
+                    <div class="Person_Info_name_Icon"></div>
+                    <div class="Person_Info_name_Letter">성명</div>
+                    <div class="Person_Info_name_Detail_Letter">황예슬</div>
                 </div>
 
                 <!-- 이메일 -->
-                <div>
-                    <div></div>
-                    <div>이메일</div>
-                    <div>dptmftkdghk1@naver.com</div>
+                <div class="Person_Info_Email_Box">
+                    <div class="Person_Info_Email_Icon"></div>
+                    <div class="Person_Info_Email_Letter">이메일</div>
+                    <div class="Person_Info_Email_Detail_Letter">dptmftkdghk1@naver.com</div>
                 </div>
 
                 <!-- 생년월일 -->
-                <div>
+                <div class="Person_Info_Birth_Box">
                     <div></div>
                     <div>생년월일</div>
                     <div>2001년 6월 16일</div>
                 </div>
 
                 <!-- 주소 -->
-                <div>
+                <div class="Person_Info_address_Box">
                     <div></div>
                     <div>주소</div>
                     <div>대구 남구 대명동</div>
@@ -108,7 +110,7 @@
 <style>
     body{
         height: 100%;
-        /* width: 100vw; */
+        min-width: 400px;
     }
     .Up_Back_Ground{
         min-height: 300px;
@@ -309,7 +311,7 @@
         /* min-width:1000px; */
         min-height:300px;
         min-width:400px;
-        height: 50vh;
+        height: 70vh;
         background-color: pink;
     }
     .Main_Back_Ground_Box{
@@ -334,7 +336,109 @@
         /* padding:10px; */
         /* margin:10px; */
     }
+    .Main_Back_Detail{
+        display:flex;
+        justify-content: center;
+        padding: 20px;
+        /* width: 100px; */
+        /* position:absolute; */
+        /* margin : 20px; */
+        z-index: 0;
+        background-color: Green;
+    }
+    .Person_Img_Position{
+        /* width: 100px; */
+        /* height: 100px; */
+    }
+    .Person_Img_Box{
+        /* width: 100px; */
+        /* height: 100px; */
+        background-color: red;
+        margin-right: 10px;
+        padding: 10px;
+    }
+    .Person_Img_Box > img{
+        /* object-fit: cover; */
+        min-width: 200px;
+        min-height: 150px;
+        width: 15vw;
+        height: 30vh;
+    }
+    .Person_Info_Back_Ground{
+        background-color: purple;
+        /* margin-right: 20px; */
+        padding: 10px;
+        width: 30vw;
+    }
+    .Person_Info_name_Box{
+        display:flex;
+        background-color:white;
+    }
+    .Person_Info_name_Icon{
 
+    }
+    .Person_Info_name_Letter{
+        background-color: red;
+        /* font-size: 3vmin; */
+        width: 10vw;
+        min-width: 60px;
+
+    }
+    .Person_Info_name_Detail_Letter{
+
+    }
+    .Person_Info_Email_Box{
+        display:flex;
+        background-color:white;
+    }
+
+    .Person_Info_Email_Icon{
+
+    }
+    .Person_Info_Email_Letter{
+        background-color: red;
+        /* font-size: 3vmin; */
+        width: 10vw;
+        min-width: 60px;
+    }
+    .Person_Info_Email_Detail_Letter{
+
+    }
+
+    .Person_Info_Birth_Box{
+        display:flex;
+        background-color:white;
+    }
+    .Person_Info_address_Box{
+        display:flex;
+        background-color:white;
+    }
+    @media (max-width : 800px) {
+        .Person_Info_Back_Ground{
+            display:none; 
+        }
+        /* body{
+            font-size: 1rem;
+        } */
+        /* .Person_Info_Email_Box{
+            background-color:black;
+        } */
+    }
+
+    @media (max-width : 400px) {
+        .Person_Info_Back_Ground{
+            display:none; 
+        }
+        body{
+            font-size: 0.8em;
+        }
+        /* body{
+            font-size: 1rem;
+        } */
+        /* .Person_Info_Email_Box{
+            background-color:black;
+        } */
+    }
     /* 빅데스크탑 */
     /* .Up_Back_Ground{
         width : 50%;
