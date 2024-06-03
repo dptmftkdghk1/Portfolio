@@ -101,7 +101,7 @@
                     </div>
 
                     <!-- detail info -->
-                    <div>
+                    <div class="Person_Info_title_Detail_Position">
                         <div class="Person_Info_name_Detail_Letter">황예슬</div>
                         <div class="Person_Info_Email_Detail_Letter">dptmftkdghk1@naver.com</div>
                         <div class="Person_Info_Birth_Detail_Letter">2001년 6월 16일</div>
@@ -147,10 +147,61 @@
                 </div> -->
             </div>
         </div>
-    </div>
+        
 
-    <div>
+        <!-- stack 설명 -->
+        <div class="Main_Stack_Ground_Box">
+            <div class="Main_Stack_Ground_Position">
+                <div class="Main_Stack_Ground_Letter">STACK</div>
+            </div>
+        </div>
 
+        <div class="Main_Stack_Detail">
+            <div class="Person_Stack_Info_Position">
+                <div class="Person_Stack_Lan_Box">
+                    <span>언어</span>
+                </div>
+
+                <div class="Person_Stack_Lan_Info_Box">
+                    <span>JAVA</span>
+                    <span>SPRING BOOT</span>
+                    <span>HTML/CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>Vue.js</span>
+                    <span>VISAUL BASIC 6.0</span>
+                </div>
+            </div>
+
+            <div class="Person_Stack_Info_Position">
+                <div class="Person_Stack_DB_Box">
+                    <span>DB</span>
+                </div>
+
+                <div class="Person_Stack_Lan_Info_Box">
+                    <span>JAVA</span>
+                    <span>SPRING BOOT</span>
+                    <span>HTML/CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>Vue.js</span>
+                    <span>VISAUL BASIC 6.0</span>
+                </div>
+            </div>
+
+            <div class="Person_Stack_Info_Position">
+                <div class="Person_Stack_Commu_Box">
+                    <span>COMMUNICATION</span>
+                </div>
+
+                <div class="Person_Stack_Lan_Info_Box">
+                    <span>JAVA</span>
+                    <span>SPRING BOOT</span>
+                    <span>HTML/CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>Vue.js</span>
+                    <span>VISAUL BASIC 6.0</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -360,12 +411,13 @@
         /* min-width:1000px; */
         min-height:300px;
         min-width:400px;
-        height: 70vh;
+        /* height: 70vh; */
         background-color: pink;
     }
     .Main_Back_Ground_Box{
         display:flex;
         padding: 20px;
+        padding-left: 25px;
         /* width: 100px; */
         /* position:absolute; */
         /* margin : 20px; */
@@ -373,7 +425,7 @@
         background-color: yellow;
     }
     .Main_Back_Ground_Position{
-        font-size:1.8rem;
+        font-size:1.5rem;
         /* background-color:white; */
         margin:10px;
         /* padding:10px; */
@@ -386,6 +438,7 @@
         /* margin:10px; */
     }
     .Main_Back_Detail{
+        min-height: 200px;
         display:flex;
         justify-content: center;
         padding: 20px;
@@ -394,6 +447,9 @@
         /* margin : 20px; */
         z-index: 0;
         background-color: Green;
+        border-bottom: 2px solid black; 
+        margin: 0 30px 0 30px;
+        /* margin: 0 20px 0 50px; */
     }
     .Person_Img_Position{
         /* width: 100px; */
@@ -401,36 +457,42 @@
     }
     .Person_Img_Box{
         /* width: 100px; */
-        /* height: 100px; */
+        /* height: 100%; */
         background-color: red;
         margin-right: 10px;
         padding: 10px;
     }
     .Person_Img_Box > img{
         /* object-fit: cover; */
-        min-width: 200px;
-        min-height: 150px;
+        /* min-width: 200px; */
+        /* min-Sheight: 150px; */
         width: 15vw;
         height: 30vh;
+        min-height: 200px;
     }
     .Person_Info_Back_Ground{
+        /* min-height: 20px; */
         background-color: purple;
         /* margin-right: 20px; */
         padding: 10px;
         width: 35vw;
+        min-height: 200px;
     }
     .Person_Info_Back_Position{
         display:flex;
+        height: 30vh;
         /* flex-direction: column-reverse; */
 
     }
     .Person_Info_Icon_Box{
-        width: 3vw;
+        width: 2.7vw;
+        height: 29vh;
         /* margin: 10px; */
         /* height: 30vh; */
         /* min-width: 200px; */
         /* min-height: 150px; */
         background-color: white;
+        min-height: 190px;
         padding:5px;
     }
     .Person_Info_name_Box{
@@ -445,8 +507,11 @@
         
     }
     .Person_Info_name_Icon > img{
-        width: 3vw;
-        height: 6vh;
+        min-height: 35px;
+        width: 2.7vw;
+        height: 5.5vh;
+        margin-top: 3px;
+
         /* margin-bottom: 10px; */
         /* width: 3.5vw; */
         /* height: 5vh; */
@@ -460,10 +525,11 @@
     }
     .Person_Info_name_Letter{
         /* flex:0.3; */
-        /* background-color: red; */
+        background-color: red;
         width: 8vw;
         height: 6vh;
-        margin-bottom: 13px;
+        margin-bottom: 10px;
+        min-height: 40px;
         /* margin-top: 5px; */
         display:flex;
         align-items:center;
@@ -476,7 +542,21 @@
 
     }
     .Person_Info_name_Detail_Letter{
-
+         /* flex:0.3; */
+        background-color: red;
+        width: 20vw;
+        height: 6vh;
+        margin-bottom: 10px;
+        min-height: 40px;
+        /* margin-top: 5px; */
+        display:flex;
+        align-items:center;
+        /* width: 3vw;
+        height: 6vh;
+        margin: 10px; */
+        /* font-size: 3vmin; */
+        /* width: 10vw; */
+        /* min-width: 60px; */
     }
     .Person_Info_Email_Box{
         /* display:flex; */
@@ -490,15 +570,16 @@
 
     .Person_Info_Email_Icon  > img{
         /* width: 2.3vw; */
-        width: 3vw;
-        height: 6vh;
+        min-height: 35px;
+        width: 2.7vw;
+        height: 5.5vh;
     }
     .Person_Info_Email_Letter{
-        /* background-color: red; */
+        background-color: red;
         width: 8vw;
         height: 6vh;
         margin-bottom: 13px;
-
+        min-height: 40px;
         display:flex;
         align-items:center;
         /* width: 3vw;
@@ -510,7 +591,13 @@
         /* min-width: 60px; */
     }
     .Person_Info_Email_Detail_Letter{
-
+        background-color: red;
+        width: 20vw;
+        height: 6vh;
+        margin-bottom: 13px;
+        min-height: 40px;
+        display:flex;
+        align-items:center;
     }
 
     .Person_Info_Birth_Box{
@@ -525,16 +612,17 @@
 
     .Person_Info_Birth_Icon  > img{
         /* width: 2.3vw; */
-        width: 3vw;
-        height: 6vh;
+        min-height: 35px;
+        width: 2.7vw;
+        height: 5.5vh;
     }
     .Person_Info_Birth_Letter{
         /* flex:0.3; */
-        /* background-color: red; */
+        background-color: red;
         width: 8vw;
         height: 6vh;
-        margin-bottom: 18px;
-
+        margin-bottom: 14px;
+        min-height: 40px;
         display:flex;
         align-items:center;
         /* width: 3vw;
@@ -545,7 +633,22 @@
         /* min-width: 60px; */
     }
     .Person_Info_Birth_Detail_Letter{
-
+        /* flex:0.3; */
+        background-color: red;
+        /* background-color: purple; */
+        width: 20vw;
+        height: 6vh;
+        margin-bottom: 14px;
+        min-height: 40px;
+        /* margin-top: 5px; */
+        display:flex;
+        align-items:center;
+        /* width: 3vw;
+        height: 6vh;
+        margin: 10px; */
+        /* font-size: 3vmin; */
+        /* width: 10vw; */
+        /* min-width: 60px; */
     }
 
     .Person_Info_address_Box{
@@ -561,8 +664,10 @@
         /* width: 2.3vw; */
         /* height: 5.2vh;
         margin: 10px; */
-        width: 3vw;
-        height: 6vh;
+        min-height: 35px;
+        width: 2.7vw;
+        height: 5.5vh;
+        margin-top:3px;
     }
     .Person_Info_title_Back_Position{
         /* background-color:blue; */
@@ -572,13 +677,14 @@
     }
 
     .Person_Info_address_Letter{
-        /* background-color: red;   */
+        background-color: red;  
         /* vertical-align: middle; */
         /* position: absolute;   
         top: 50%;    
         transform: translate(0, -50%); */
         width: 8vw;
         height: 6vh;
+        min-height: 40px;
 
         display:flex;
         align-items:center;
@@ -590,7 +696,144 @@
         /* min-width: 60px; */
     }
     .Person_Info_address_Detail_Letter{
+        /* flex:0.3; */
+        background-color: red;
+        width: 20vw;
+        height: 6vh;
+        margin-bottom: 13px;
+        min-height: 40px;
+        /* margin-top: 5px; */
+        display:flex;
+        align-items:center;
+        /* width: 3vw;
+        height: 6vh;
+        margin: 10px; */
+        /* font-size: 3vmin; */
+        /* width: 10vw; */
+        /* min-width: 60px; */
+    }
 
+    .Person_Info_title_Detail_Position{
+        /* background-color:blue; */
+        width: 20vw;
+        padding: 5px;
+        font-size: 1.3rem;
+    }
+
+    .Main_Stack_Ground_Box{
+        display:flex;
+        padding: 20px;
+        padding-left: 25px;
+        /* width: 100px; */
+        /* position:absolute; */
+        /* margin : 20px; */
+        z-index: 0;
+        background-color: yellow;
+    }
+    .Main_Stack_Ground_Position{
+        font-size:1.5rem;
+        /* background-color:white; */
+        margin:10px;
+        /* padding:10px; */
+        /* margin:10px; */
+    }
+    .Main_Stack_Ground_letter{
+        /* font-size:3rem; */
+        /* background-color:white; */
+        /* padding:10px; */
+        /* margin:10px; */
+    }
+
+    .Main_Stack_Detail{
+        display:flex;
+        justify-content: center;
+        padding: 20px;
+        /* width: 100px; */
+        /* position:absolute; */
+        /* margin : 20px; */
+        z-index: 0;
+        background-color: Green;
+        border-bottom: 2px solid black; 
+        margin: 0 30px 0 30px;
+        /* margin: 0 20px 0 50px; */
+    }
+
+    .Person_Stack_Info_Position{
+        /* width: 100px; */
+        /* height: 100%; */
+        background-color: red;
+        /* margin-right:30px; */
+        padding: 10px;
+        width: 15vw;
+        height: 50vh;
+    }
+    .Person_Stack_Lan_Box{
+
+    }
+
+    .Person_Stack_Lan_Info_Box span{
+        display:flex;
+        justify-content: center;
+        background-color: blue;
+        /* height: 5vh; */
+        /* padding: 10px 0 10px 0; */
+        /* margin-top: 10px; */
+        /* padding: 20px 0 20px 0; */
+    }
+    .Person_Stack_Lan_Box span{
+        width: 15vw;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .Person_Stack_DB_Box{
+    }
+    .Person_Stack_DB_Box span{
+        width: 15vw;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .Person_Stack_Commu_Box{
+    }
+    .Person_Stack_Commu_Box span{
+        width: 15vw;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .Person_Stack_Lan_Box{
+        display:flex;
+        justify-content: center;
+    }
+    .Person_Stack_Lan_Box span{
+        background-color: white;
+        border-radius: 8px;
+        padding-top: 0.8vh;
+        padding-bottom: 0.8vh;
+        /* height: 5vh; */
+    }
+
+    .Person_Stack_DB_Box{
+        display:flex;
+        justify-content: center;
+    }
+    .Person_Stack_DB_Box span{
+        background-color: white;
+        border-radius: 8px;
+        padding-top: 0.8vh;
+        padding-bottom: 0.8vh;
+        /* height: 5vh; */
+    }
+
+    .Person_Stack_Commu_Box{
+        display:flex;
+        justify-content: center;
+    }
+    .Person_Stack_Commu_Box span{
+        background-color: white;
+        border-radius: 8px;
+        padding-top: 0.8vh;
+        padding-bottom: 0.8vh;
+        /* height: 5vh; */
     }
 
     @media (max-width : 1000px){
