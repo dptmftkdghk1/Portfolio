@@ -6,8 +6,8 @@
     <title>Document</title>
     <!-- 기본 Css 디자인 초기화 -->
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
     </head>
     
 </head>
@@ -60,7 +60,7 @@
     <div class="Main_Back_Ground">
         <div class="Main_Back_Ground_Box">
             <div class="Main_Back_Ground_Position">
-                <div class="Main_Back_Ground_Letter">ABOUT US</div>
+                <div class="Main_Back_Ground_Letter">#ABOUT US</div>
             </div>
         </div>
 
@@ -152,7 +152,7 @@
         <!-- stack 설명 -->
         <div class="Main_Stack_Ground_Box">
             <div class="Main_Stack_Ground_Position">
-                <div class="Main_Stack_Ground_Letter">STACK</div>
+                <div class="Main_Stack_Ground_Letter">#STACK</div>
             </div>
         </div>
 
@@ -201,17 +201,38 @@
 </body>
 
 <style>
-    /* @font-face {
-        font-family: 'GongGothicMedium';
-        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    } */
+    @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+    }
+
+    @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+    }
+
+    @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+    }
+
+.nanumbarungothic * {
+ font-family: 'NanumBarunGothic', sans-serif;
+}
     *{
-        font-family: 'GongGothicMedium';
-        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+        font-family: 'NanumBarunGothic';
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
     }
     body{
         height: 100%;
@@ -220,12 +241,27 @@
     .Up_Back_Ground{
         min-height: 300px;
         min-width: 400px;
+        position: relative;
         /* min-width: 400px; */
         /* width : 100vw; */
-        height: 45vh;
-        background-color : #C2DEF1;
+        height: 53vh;
+        /* background-color : #C2DEF1; */
+        background-image: url(./Src/stream.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .Up_Back_Ground::before{
+        content:"";
+        opacity:0.5;
+        position:absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        background-color: #71bff3;
     }
     .Up_Back_Ground_Title_Position{
+        position: relative;
         /* width:100vw; */
         min-height: 100px;
         height: 20vh;
@@ -238,14 +274,18 @@
     }
     .Up_Back_Ground_Title{
         /* width: 300px; */
-        padding:10px;
+        padding:10px 20px 10px 20px;
         background-color:white;
-        border-radius:30px;
+        border-radius:45px;
     }
     .Up_Back_Ground_letter{
+        
+        font-size: 1.8rem;
+        font-weight: 800;
         padding:10px;
     }
     .Middle_Description{
+        position: relative;
         /* width: 100vw; */
         min-height: 200px;
         /* background-color: green; */
@@ -257,29 +297,46 @@
 
     }
     .Middle_Description_position{
-        background-color:white;
+        border-radius : 30px;
+        padding: 10px;
         text-align:center;
         line-height:normal;
         
     }
     .Middle_Description_letter_1{
+        color: rgba(0,0,0,0.7);
+        font-weight: 800;
+        
         /* min-width: 200px; */
-        background: white;
+        /* background: white; */
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        /* color: rgba(0,0,0,0.6); */
         /* position:relative; */
         /* background-color: white; */
         /* text-align:center; */
 
     }
     .Middle_Description_letter_2{
+        color: rgba(0,0,0,0.7);
+        font-weight: 800;
         /* min-width: 200px; */
-        background: white;
+        /* background: white; */
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        /* color: rgba(0,0,0,0.6); */
         /* position:relative; */
         text-align:center;
         /* top: 5px; */
     }
     .Middle_Description_letter_3{
+        color: rgba(0,0,0,0.7);
+        font-weight: 800;
         /* min-width: 200px; */
-        background: white;
+        /* background: white; */
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        /* color: rgba(0,0,0,0.6); */
         /* position:relative; */
         text-align:center;
         /* top: 10px; */
@@ -288,11 +345,11 @@
     .Menu_Back_Ground{
         position:sticky;
         top:0px;
-        height: 7vh;
+        height: 10vh;
         min-height: 50px;
         min-width: 400px;
         /* height: 50px; */
-        background-color : blue;
+        background-color: #C2DEF1;
         z-index: 1;
     }
     .Menu_Button_Position{
@@ -419,24 +476,26 @@
         min-height:300px;
         min-width:400px;
         /* height: 70vh; */
-        background-color: pink;
+        /* background-color: pink; */
     }
     .Main_Back_Ground_Box{
         display:flex;
+        justify-content: center;
         padding: 20px;
         padding-left: 25px;
         /* width: 100px; */
         /* position:absolute; */
         /* margin : 20px; */
         z-index: 0;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
     .Main_Back_Ground_Position{
         font-size:1.5rem;
-        /* background-color:white; */
-        margin:10px;
-        /* padding:10px; */
+        border-bottom: 3px solid black;
+        /* background-color:black */
         /* margin:10px; */
+        /* padding:10px; */
+        margin:10px;
     }
     .Main_Back_Ground_letter{
         /* font-size:3rem; */
@@ -453,8 +512,8 @@
         /* position:absolute; */
         /* margin : 20px; */
         z-index: 0;
-        background-color: Green;
-        border-bottom: 2px solid black; 
+        background-color: rgba(0,0,0,0.1);
+        /* border-bottom: 2px solid rgba(0,0,0,0.3); */
         margin: 0 30px 0 30px;
         /* margin: 0 20px 0 50px; */
     }
@@ -465,7 +524,7 @@
     .Person_Img_Box{
         /* width: 100px; */
         /* height: 100%; */
-        background-color: red;
+        /* background-color: #C2DEF1; */
         margin-right: 10px;
         padding: 10px;
     }
@@ -476,10 +535,11 @@
         width: 15vw;
         height: 30vh;
         min-height: 200px;
+        border-radius: 20px;
     }
     .Person_Info_Back_Ground{
         /* min-height: 20px; */
-        background-color: purple;
+        /* background-color: purple; */
         /* margin-right: 20px; */
         padding: 10px;
         width: 35vw;
@@ -498,17 +558,17 @@
         /* height: 30vh; */
         /* min-width: 200px; */
         /* min-height: 150px; */
-        background-color: white;
+        /* background-color: white; */
         min-height: 190px;
         padding:5px;
     }
     .Person_Info_name_Box{
         /* display:flex; */
-        background-color:white;
+        /* background-color:white; */
     }
     .Person_Info_name_Icon{
         /* background-color:coral; */
-        margin-bottom: 13px;
+        margin-bottom: 7px;
         
         /* object-fit: cover; */
         
@@ -532,7 +592,7 @@
     }
     .Person_Info_name_Letter{
         /* flex:0.3; */
-        background-color: red;
+        /* background-color: red; */
         width: 8vw;
         height: 6vh;
         margin-bottom: 10px;
@@ -550,7 +610,7 @@
     }
     .Person_Info_name_Detail_Letter{
          /* flex:0.3; */
-        background-color: red;
+        /* background-color: red; */
         width: 20vw;
         height: 6vh;
         margin-bottom: 10px;
@@ -567,12 +627,12 @@
     }
     .Person_Info_Email_Box{
         /* display:flex; */
-        background-color:white;
+        /* background-color:white; */
     }
 
     .Person_Info_Email_Icon{
         /* background-color:coral; */
-        margin-bottom: 13px;
+        margin-bottom: 10px;
     }
 
     .Person_Info_Email_Icon  > img{
@@ -582,7 +642,7 @@
         height: 5.5vh;
     }
     .Person_Info_Email_Letter{
-        background-color: red;
+        /* background-color: red; */
         width: 8vw;
         height: 6vh;
         margin-bottom: 13px;
@@ -598,7 +658,7 @@
         /* min-width: 60px; */
     }
     .Person_Info_Email_Detail_Letter{
-        background-color: red;
+        /* background-color: red; */
         width: 20vw;
         height: 6vh;
         margin-bottom: 13px;
@@ -614,7 +674,7 @@
 
     .Person_Info_Birth_Icon{
         /* background-color:coral; */
-        margin-bottom: 13px;
+        margin-bottom: 7px;
     }
 
     .Person_Info_Birth_Icon  > img{
@@ -625,7 +685,7 @@
     }
     .Person_Info_Birth_Letter{
         /* flex:0.3; */
-        background-color: red;
+        /* background-color: red; */
         width: 8vw;
         height: 6vh;
         margin-bottom: 14px;
@@ -641,7 +701,7 @@
     }
     .Person_Info_Birth_Detail_Letter{
         /* flex:0.3; */
-        background-color: red;
+        /* background-color: red; */
         /* background-color: purple; */
         width: 20vw;
         height: 6vh;
@@ -678,13 +738,14 @@
     }
     .Person_Info_title_Back_Position{
         /* background-color:blue; */
-        width: 8vw;
+        width: 7.5vw;
         padding: 3px;
         font-size: 1.5rem;
+        margin-left: 10px;
     }
 
     .Person_Info_address_Letter{
-        background-color: red;  
+        /* background-color: red;   */
         /* vertical-align: middle; */
         /* position: absolute;   
         top: 50%;    
@@ -704,7 +765,7 @@
     }
     .Person_Info_address_Detail_Letter{
         /* flex:0.3; */
-        background-color: red;
+        /* background-color: red; */
         width: 20vw;
         height: 6vh;
         margin-bottom: 13px;
@@ -729,22 +790,25 @@
 
     .Main_Stack_Ground_Box{
         display:flex;
+        justify-content: center;
         padding: 20px;
         padding-left: 25px;
         /* width: 100px; */
         /* position:absolute; */
         /* margin : 20px; */
         z-index: 0;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
     .Main_Stack_Ground_Position{
         font-size:1.5rem;
+        border-bottom: 3px solid black;
         /* background-color:white; */
         margin:10px;
         /* padding:10px; */
         /* margin:10px; */
     }
     .Main_Stack_Ground_letter{
+        /* border-bottom: 3px solid black; */
         /* font-size:3rem; */
         /* background-color:white; */
         /* padding:10px; */
@@ -759,22 +823,23 @@
         /* position:absolute; */
         /* margin : 20px; */
         z-index: 0;
-        background-color: Green;
-        border-bottom: 2px solid black; 
+        /* background-color: Green; */
+        border-bottom: 2px solid rgba(0,0,0,0.7); 
         margin: 0 30px 0 30px;
     }
 
     .Person_Stack_Info_Position{
-        background-color: red;
+        background-color: rgba(0,0,0,0.1);
         padding: 10px;
         width: 15vw;
         height: 50vh;
         min-height: 300px;
         margin: 0 15px 0 15px;
+        border-radius: 10px;
     }
     .Person_Stack_Lan_Info_Box, .Person_Stack_DB_Info_Box, .Person_Stack_Commu_Info_Box{
         min-height: 260px;
-        background-color: blue;
+        /* background-color: #C2DEF1; */
     }
 
     .Person_Stack_Lan_Info_Box span, .Person_Stack_DB_Info_Box span, .Person_Stack_Commu_Info_Box span{
@@ -811,7 +876,8 @@
         justify-content: center;
     }
     .Person_Stack_Lan_Box span{
-        background-color: white;
+        background-color: #0a9dff;
+        color: white;
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
@@ -822,7 +888,8 @@
         justify-content: center;
     }
     .Person_Stack_DB_Box span{
-        background-color: white;
+        background-color: #0a9dff;
+        color: white;
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
@@ -833,7 +900,8 @@
         justify-content: center;
     }
     .Person_Stack_Commu_Box span{
-        background-color: white;
+        background-color: #0a9dff;
+        color: white;
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
