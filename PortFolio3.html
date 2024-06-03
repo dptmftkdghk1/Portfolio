@@ -177,13 +177,10 @@
                     <span>DB</span>
                 </div>
 
-                <div class="Person_Stack_Lan_Info_Box">
-                    <span>JAVA</span>
-                    <span>SPRING BOOT</span>
-                    <span>HTML/CSS</span>
-                    <span>JAVASCRIPT</span>
-                    <span>Vue.js</span>
-                    <span>VISAUL BASIC 6.0</span>
+                <div class="Person_Stack_DB_Info_Box">
+                    <span>MYSQL</span>
+                    <span>ORACLE</span>
+                    <span>MSSQL</span>
                 </div>
             </div>
 
@@ -192,13 +189,11 @@
                     <span>COMMUNICATION</span>
                 </div>
 
-                <div class="Person_Stack_Lan_Info_Box">
-                    <span>JAVA</span>
-                    <span>SPRING BOOT</span>
-                    <span>HTML/CSS</span>
-                    <span>JAVASCRIPT</span>
-                    <span>Vue.js</span>
-                    <span>VISAUL BASIC 6.0</span>
+                <div class="Person_Stack_Commu_Info_Box">
+                    <span>SLACK</span>
+                    <span>GIT</span>
+                    <span>NOTION</span>
+                    <span>DISCORD</span>
                 </div>
             </div>
         </div>
@@ -206,6 +201,18 @@
 </body>
 
 <style>
+    /* @font-face {
+        font-family: 'GongGothicMedium';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    } */
+    *{
+        font-family: 'GongGothicMedium';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
     body{
         height: 100%;
         min-width: 400px;
@@ -672,7 +679,7 @@
     .Person_Info_title_Back_Position{
         /* background-color:blue; */
         width: 8vw;
-        padding: 5px;
+        padding: 3px;
         font-size: 1.5rem;
     }
 
@@ -716,7 +723,7 @@
     .Person_Info_title_Detail_Position{
         /* background-color:blue; */
         width: 20vw;
-        padding: 5px;
+        padding: 3px;
         font-size: 1.3rem;
     }
 
@@ -755,48 +762,47 @@
         background-color: Green;
         border-bottom: 2px solid black; 
         margin: 0 30px 0 30px;
-        /* margin: 0 20px 0 50px; */
     }
 
     .Person_Stack_Info_Position{
-        /* width: 100px; */
-        /* height: 100%; */
         background-color: red;
-        /* margin-right:30px; */
         padding: 10px;
         width: 15vw;
         height: 50vh;
+        min-height: 300px;
+        margin: 0 15px 0 15px;
     }
-    .Person_Stack_Lan_Box{
-
-    }
-
-    .Person_Stack_Lan_Info_Box span{
-        display:flex;
-        justify-content: center;
+    .Person_Stack_Lan_Info_Box, .Person_Stack_DB_Info_Box, .Person_Stack_Commu_Info_Box{
+        min-height: 260px;
         background-color: blue;
-        /* height: 5vh; */
-        /* padding: 10px 0 10px 0; */
-        /* margin-top: 10px; */
-        /* padding: 20px 0 20px 0; */
+    }
+
+    .Person_Stack_Lan_Info_Box span, .Person_Stack_DB_Info_Box span, .Person_Stack_Commu_Info_Box span{
+        display:flex; 
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        font-size: 1.3rem;
     }
     .Person_Stack_Lan_Box span{
         width: 15vw;
-        font-size: 1.5rem;
+        min-height: 25px;
+        font-size: 1.3rem;
         text-align: center;
     }
     .Person_Stack_DB_Box{
     }
     .Person_Stack_DB_Box span{
         width: 15vw;
-        font-size: 1.5rem;
+        min-height: 25px;
+        font-size: 1.3rem;
         text-align: center;
     }
     .Person_Stack_Commu_Box{
     }
     .Person_Stack_Commu_Box span{
         width: 15vw;
-        font-size: 1.5rem;
+        min-height: 25px;
+        font-size: 1.3rem;
         text-align: center;
     }
 
@@ -809,7 +815,6 @@
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
-        /* height: 5vh; */
     }
 
     .Person_Stack_DB_Box{
@@ -821,7 +826,6 @@
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
-        /* height: 5vh; */
     }
 
     .Person_Stack_Commu_Box{
@@ -833,7 +837,6 @@
         border-radius: 8px;
         padding-top: 0.8vh;
         padding-bottom: 0.8vh;
-        /* height: 5vh; */
     }
 
     @media (max-width : 1000px){
